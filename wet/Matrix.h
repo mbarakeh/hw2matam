@@ -56,7 +56,8 @@ public:
 
     Matrix transpose() const;
 
-    double CalcFrobeniusNorm();
+  static  double CalcFrobeniusNorm( const Matrix& matrix);
+
 };
 
 

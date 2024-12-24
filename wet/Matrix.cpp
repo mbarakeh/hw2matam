@@ -225,12 +225,12 @@ Matrix Matrix::transpose() const{
     return T_matrix;
 }
 
-double Matrix::CalcFrobeniusNorm() {
+double Matrix::CalcFrobeniusNorm(const Matrix& matrix) {
 
     int sum = 0;
 
-    for(int i = 0; i < length*width ; i++){
-        sum += m_matrix[i] * m_matrix[i];
+    for(int i = 0; i < matrix.length * matrix.width ; i++){
+        sum += matrix.m_matrix[i] * matrix.m_matrix[i];
     }
     return std::sqrt(sum);
 
